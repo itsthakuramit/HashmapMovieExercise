@@ -47,3 +47,8 @@ Refer the problem.md file for problem description.
 
 ### Further Instructions on Release
 - Right click on the Assignment, select Run As -> JUnit Test to run your Assignment.
+
+## Hobbes Submission
+
+Once you have written your code and pushed back to your repository you can get that evaluated automatically using our hobbes. You can click the below link to submit this assignment
+#### [Hobbes Submission](https://hobbes.stackroute.in/#/submission/git%40assignments-repo.stackroute.in%3Astack_jfse_prereq_corejavads_exercises_assignments%2Fexercise-bt-collections-hashmap-movie-solution.git%23master)
