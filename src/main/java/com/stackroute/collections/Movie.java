@@ -7,23 +7,43 @@ Movie class has four fields- movieId,movieName, genre and releaseDate
 This class should be of Comparable type comparing movies based on releaseDate
  */
 public class Movie {
+	
+	private int movieId;
+	private String movieName;
+	private String genre;
+	private LocalDate releaseDate;
 
     public Movie(int movieId, String movieName, String genre, LocalDate releaseDate) {
+    	this.movieId=movieId;
+    	this.movieName=movieName;
+    	this.genre=genre;
+    	this.releaseDate=releaseDate;
+    	
     }
 
     public int getMovieId() {
-        return 0;
+        return movieId;
     }
 
     public String getMovieName() {
-        return null;
+        return movieName;
     }
 
     public String getGenre() {
-        return null;
+        return genre;
     }
 
     public LocalDate getReleaseDate() {
-        return null;
+        return releaseDate;
     }
+
+	@Override
+	public String toString() {
+		return "Movie [movieId=" + movieId + ", movieName=" + movieName + ", genre=" + genre + ", releaseDate="
+				+ releaseDate + "]";
+	}
+    
+    
+    
+    
 }

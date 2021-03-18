@@ -14,6 +14,7 @@ public class MovieService {
      * Constructor to create movieMap as an empty  LinkedHashMap object
      */
     public MovieService() {
+    	Map<Movie, Integer> movieMap= new LinkedHashMap<>();
     }
 
     /*
