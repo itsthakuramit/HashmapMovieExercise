@@ -6,7 +6,7 @@ import java.time.LocalDate;
 Movie class has four fields- movieId,movieName, genre and releaseDate
 This class should be of Comparable type comparing movies based on releaseDate
  */
-public class Movie {
+public class Movie implements Comparable<Movie>{
 	
 	private int movieId;
 	private String movieName;
@@ -42,8 +42,14 @@ public class Movie {
 		return "Movie [movieId=" + movieId + ", movieName=" + movieName + ", genre=" + genre + ", releaseDate="
 				+ releaseDate + "]";
 	}
+
+	@Override
+	public int compareTo(Movie o) {
+		
+		return 0;
+	}
     
-    
+	
     
     
 }
