@@ -18,8 +18,7 @@ public class MovieService {
      * Constructor to create movieMap as an empty  LinkedHashMap object
      */
     public MovieService() {
-    	
-    	Map<Movie, Integer> movieMap= new LinkedHashMap<>();
+   
     }
     
     
@@ -51,7 +50,7 @@ public class MovieService {
     public List<String> getHigherRatedMovieNames(int rating) {
     	
     	List<String> list= new ArrayList<>();
-    	for(Map.Entry m : movieMap.entrySet()){  
+    	for(Map.Entry<Movie,Integer> m : movieMap.entrySet()){  
     		int i = (int)m.getValue();
     	   if(i>=rating)
     	   {
@@ -70,7 +69,7 @@ public class MovieService {
     public List<String> getMovieNamesOfSpecificGenre(String genre) {
  
     	List<String> list= new ArrayList<>();
-    	for(Map.Entry m : movieMap.entrySet()){  
+    	for(Map.Entry<Movie,Integer> m : movieMap.entrySet()){  
     		Movie mo= (Movie) m.getKey();
     		String str= mo.getGenre();	
 	    	   if(str.equals(genre)) {
@@ -88,7 +87,7 @@ public class MovieService {
     public List<String> getMovieNamesReleasedAfterSpecificDateAndRatingLesserThanThree(LocalDate releaseDate) {
     	
     	List<String> list= new ArrayList<>();
-    	for(Map.Entry m : movieMap.entrySet()){  
+    	for(Map.Entry<Movie,Integer> m : movieMap.entrySet()){  
     		Movie mo= (Movie) m.getKey();
     		LocalDate ld=mo.getReleaseDate();
     		int i=(int) m.getValue();
@@ -144,7 +143,7 @@ public class MovieService {
     		Comparator<Map.Entry<Movie, Integer>> valueComparator = new Comparator<Map.Entry<Movie, Integer>>() {
 
 			@Override
-			public int compare(Entry<Movie, Integer> o1, Entry<Movie, Integer> o2) {
+			public int compare(Map.Entry<Movie, Integer> o1, Map.Entry<Movie, Integer> o2) {
 				  Integer v1 = o1.getValue();
 	              Integer v2 = o2.getValue();
 	                return v1.compareTo(v2);

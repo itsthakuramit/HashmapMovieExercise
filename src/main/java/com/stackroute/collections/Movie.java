@@ -12,6 +12,7 @@ public class Movie implements Comparable<Movie>{
 	private String movieName;
 	private String genre;
 	private LocalDate releaseDate;
+	
 
     public Movie(int movieId, String movieName, String genre, LocalDate releaseDate) {
     	this.movieId=movieId;
@@ -43,10 +44,11 @@ public class Movie implements Comparable<Movie>{
 				+ releaseDate + "]";
 	}
 
+
 	@Override
 	public int compareTo(Movie o) {
 		
-		return 0;
+		return this.compareTo(o);
 	}
     
 	
